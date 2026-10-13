@@ -10,7 +10,7 @@ Na raiz do repositório:
 python3 -m http.server 8080
 ```
 
-Abra o endereço local do servidor no navegador. Não é necessário instalar pacotes para executar o site.
+Abra o endereço local do servidor no navegador. Não é necessário instalar pacotes para executar o site. As fontes Plus Jakarta Sans são servidas localmente; sua licença está em `assets/fonts/LICENSE.txt`.
 
 ## Orçamentos
 
@@ -18,7 +18,7 @@ Todos os CTAs abrem o WhatsApp `5577999741169` com mensagens específicas. O for
 
 ## Imagens
 
-O logo foi extraído do PDF fornecido pela empresa e otimizado em WebP. As imagens de produtos são ilustrações SVG, identificadas como representativas. As fotos enviadas na conversa ainda precisam estar disponíveis como arquivos locais para inclusão; não foram substituídas por fotos de terceiros.
+O logo foi extraído do PDF fornecido pela empresa e otimizado em WebP. As imagens editoriais de produção, coleção, camisetas e bordado foram geradas por IA e identificadas como ilustrativas na página; não representam a fábrica ou o catálogo real. O acesso ao Instagram foi negado (HTTP 403). A composição usa como referência visual as polos e camisas sociais mostradas pelo usuário. Substitua os arquivos WebP por fotos reais quando disponíveis.
 
 ## Vercel
 
@@ -29,3 +29,7 @@ Ao definir o domínio definitivo, configure URL canônica e metadados absolutos 
 ## Validação
 
 Validar layout em 320, 390, 768 e 1440 pixels, navegação mobile, links de contato, formulário com múltiplas categorias e mensagens de erro. O envio final no WhatsApp requer interação do cliente.
+
+## Redesign
+
+Direção: vitrine editorial com fotos em tamanhos diferentes, azul royal, títulos maiores, fontes locais e animações leves com suporte a movimento reduzido. A seleção de linha na vitrine marca a categoria correspondente no formulário. Todo conteúdo permanece legível sem a animação ou sem o CDN.

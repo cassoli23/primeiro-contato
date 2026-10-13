@@ -42,3 +42,24 @@ form.addEventListener('submit', event => {
   ].filter(Boolean).join('\n');
   window.location.assign(whatsappUrl(message));
 });
+
+// A seleção da vitrine prepara a categoria no formulário, sem enviar dados.
+document.querySelectorAll('[data-line]').forEach(button => {
+  button.setAttribute('aria-pressed', 'false');
+  button.addEventListener('click', () => {
+    document.querySelectorAll('[data-line]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    form.querySelectorAll('[name="category"]').forEach(input => { input.checked = input.value === button.dataset.line; });
+    document.querySelector('#contato').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  });
+});
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('h1, h2, .hero-intro, .hero-blue, .product-card, .tech-list article, .coverage-title, .faq-list details, .quote-form, .contact-copy, .footer-grid > div').forEach(element => observer.observe(element));
+}
