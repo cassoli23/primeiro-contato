@@ -1367,3 +1367,54 @@ html:root {
     margin-top: 16px;
   }
 }
+
+/* Confiança: fatos documentados, sem imagens ou dependências adicionais. */
+:root #confianca {
+  padding-block: 36px;
+  background: var(--navy);
+  color: var(--paper);
+}
+:root #confianca h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+:root #confianca .trust-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 24px 0 0;
+}
+:root #confianca .trust-facts > div {
+  min-width: 0;
+}
+:root #confianca dt {
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+:root #confianca dd {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+@media (max-width: 1023px) {
+  :root #confianca .trust-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+  }
+}
+@media (max-width: 760px) {
+  :root #confianca {
+    padding-block: 24px;
+  }
+  :root #confianca h2 {
+    font-size: 24px;
+  }
+  :root #confianca .trust-facts {
+    gap: 18px 16px;
+    margin-top: 20px;
+  }
+}
