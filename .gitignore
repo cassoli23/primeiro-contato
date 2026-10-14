@@ -1,0 +1,24 @@
+# Ruflo local secrets and runtime data
+.env
+.env.local
+.env.*.local
+.claude-flow/data/
+.claude-flow/logs/
+.claude-flow/sessions/
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+
+.agents/
+.arena/
+.taste-skill/
+.playwright/
+.claude/
+.claude-flow/
+.swarm/
+.mcp.json
+CLAUDE.md
+ruvector.db
+ruvector.db-*
+skills-lock.json
+node_modules/
+.vercel/
