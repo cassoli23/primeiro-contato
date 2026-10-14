@@ -1256,3 +1256,114 @@ html:root {
     aspect-ratio: 2 / 1;
   }
 }
+
+/* Vitrine: três linhas de catálogo com a mesma presença, sem caixas decorativas. */
+:root #produtos .section-heading {
+  gap: 40px;
+  margin-bottom: 36px;
+}
+:root #produtos .product-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+:root #produtos .product-card {
+  display: flex;
+  flex-direction: column;
+  grid-row: auto;
+}
+:root #produtos .product-visual {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+:root #produtos .product-visual img {
+  object-position: center;
+}
+:root #produtos .product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding-top: 20px;
+}
+:root #produtos .product-content > p {
+  margin: 12px 0 0;
+  line-height: 1.6;
+}
+:root #produtos .product-examples {
+  list-style: disc;
+  padding: 0 0 0 18px;
+  margin: 16px 0 20px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+:root #produtos .product-examples li::marker {
+  color: var(--gold-ink);
+}
+:root #produtos .card-link {
+  margin-top: auto;
+  font-size: 14px;
+}
+:root #produtos .brand-detail {
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  margin-top: 40px;
+}
+:root #produtos .brand-detail figure {
+  height: 100%;
+  min-height: 150px;
+}
+:root #produtos .brand-detail > div {
+  padding: 24px 28px 24px 0;
+}
+:root #produtos .brand-detail p {
+  margin-top: 12px;
+  line-height: 1.6;
+}
+:root #produtos .brand-detail h3 {
+  color: var(--ink);
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  :root #produtos .product-gallery {
+    gap: 24px;
+  }
+}
+@media (max-width: 760px) {
+  :root #produtos {
+    padding-block: 48px;
+  }
+  :root #produtos .section-heading {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  :root #produtos .line-picker {
+    margin-top: 16px;
+  }
+  :root #produtos .product-gallery {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  :root #produtos .product-visual {
+    aspect-ratio: 2 / 1;
+  }
+  :root #produtos .product-content {
+    padding-top: 16px;
+  }
+  :root #produtos .product-examples {
+    margin: 12px 0;
+  }
+  :root #produtos .brand-detail {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+  }
+  :root #produtos .brand-detail > div {
+    padding: 20px 16px 20px 0;
+  }
+  :root #produtos .brand-detail h3 {
+    font-size: 22px;
+  }
+  :root #produtos .image-note {
+    margin-top: 16px;
+  }
+}
