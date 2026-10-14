@@ -89,7 +89,7 @@ const syncCategorySelection = () => {
   });
   const summary = document.querySelector("#selection-summary");
   summary.textContent = categories.length
-    ? `${categories.length === 1 ? "Linha escolhida" : "Linhas escolhidas"}: ${categories.join(", ")}. Você pode ajustar as opções abaixo.`
+    ? `${categories.length === 1 ? "Linha escolhida" : "Linhas escolhidas"}: ${categories.join(", ")}. Você pode ajustar as opções no formulário.`
     : "";
   summary.hidden = categories.length === 0;
   if (selected.length) clearFieldError(selected[0]);

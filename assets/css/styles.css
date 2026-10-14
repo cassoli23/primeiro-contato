@@ -1418,3 +1418,182 @@ html:root {
     margin-top: 20px;
   }
 }
+
+/* Orçamento: apresentação isolada; validação e mensagem permanecem no JS atual. */
+:root #contato {
+  padding-block: 64px;
+}
+:root #contato .contact-grid {
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+}
+:root #contato .contact-copy {
+  padding-top: 16px;
+}
+:root #contato .contact-copy h2 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  max-width: 16ch;
+}
+:root #contato .contact-copy > p {
+  margin-top: 16px;
+  line-height: 1.6;
+}
+:root #contato .contact-direct {
+  margin-top: 24px;
+}
+:root #contato .contact-direct > p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+:root #contato .contact-copy .contact-note {
+  margin-top: 18px;
+}
+:root #contato .quote-form {
+  padding: 28px;
+}
+:root #contato .quote-form h3 {
+  font-size: 22px;
+}
+:root #contato .form-intro {
+  margin: 6px 0 20px;
+}
+:root #contato .form-controls > fieldset {
+  margin: 0 0 20px;
+}
+:root #contato .quote-form legend {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+:root #contato .quote-form label {
+  margin-bottom: 0;
+}
+:root #contato .form-row {
+  gap: 14px;
+}
+:root #contato .quote-details-fields label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+:root #contato .quote-details-fields input {
+  margin-top: 0;
+}
+:root #contato .quote-contact-fields .form-row + .form-row {
+  grid-template-columns: 1fr;
+  margin-top: 14px;
+}
+:root #contato input:not([type="checkbox"]) {
+  margin-top: 6px;
+  padding: 10px;
+}
+:root #contato .field-help {
+  margin: 0 0 12px;
+}
+:root #contato .category-options {
+  gap: 8px;
+}
+:root #contato .category-options label {
+  min-height: 50px;
+  padding: 10px;
+  border: 2px solid transparent;
+  line-height: 1.4;
+}
+:root #contato .category-options label:has(input:checked) {
+  background: var(--navy);
+  color: var(--paper);
+  border-color: var(--navy);
+}
+:root #contato .category-options input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--navy);
+}
+:root #contato .category-options label:has(input:checked) input {
+  accent-color: var(--gold);
+}
+:root #contato .category-options label:focus-within {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+:root #contato .category-options label:has(input:checked) input:focus-visible {
+  outline-color: var(--paper);
+}
+:root #contato .selection-summary {
+  background: var(--gold-surface);
+  border-left: 4px solid var(--gold-ink);
+  padding: 12px 14px;
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+:root #contato .form-submit {
+  background: var(--gold);
+  color: var(--navy);
+  min-height: 56px;
+  font-size: 15px;
+}
+:root #contato .form-submit:hover {
+  background: #f3dca8;
+}
+:root #contato .input-error {
+  margin-top: 6px;
+  line-height: 1.5;
+}
+:root #contato input[aria-invalid="true"] {
+  border-color: #9b261f;
+}
+:root #contato #form-error {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+:root #contato .privacy-note {
+  margin-top: 14px;
+  line-height: 1.55;
+}
+@media (max-width: 760px) {
+  :root #contato {
+    padding-block: 36px;
+  }
+  :root #contato .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  :root #contato .contact-copy {
+    padding: 0;
+  }
+  :root #contato .contact-copy h2 {
+    font-size: 32px;
+    max-width: none;
+  }
+  :root #contato .contact-direct {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+    margin-top: 14px;
+  }
+  :root #contato .direct-link {
+    font-size: 20px;
+    gap: 10px;
+  }
+  :root #contato .contact-direct > p {
+    margin: 0;
+  }
+  :root #contato .contact-copy .contact-note {
+    margin-top: 12px;
+  }
+  :root #contato .quote-form {
+    padding: 22px 18px;
+  }
+  :root #contato .quote-contact-fields .form-row {
+    grid-template-columns: 1fr;
+  }
+  :root #contato .quote-details-fields .form-row,
+  :root #contato .category-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  :root #contato .quote-details-fields label {
+    min-width: 0;
+  }
+}

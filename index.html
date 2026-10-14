@@ -389,9 +389,9 @@
       <section id="contato" class="contact-section section">
         <div class="container contact-grid">
           <div class="contact-copy">
-            <h2>Vamos vestir<br />sua equipe?</h2>
+            <h2>Solicite seu orçamento.</h2>
             <p>
-              Conte o que você precisa e comece seu orçamento com a ParanáLEM.
+              Preencha os dados, revise e envie pelo WhatsApp.
             </p>
             <div class="contact-direct">
               <a
@@ -421,13 +421,7 @@
             </p>
           </div>
           <form id="quote-form" class="quote-form" novalidate>
-            <h3>Seu orçamento</h3>
-            <p
-              id="selection-summary"
-              class="selection-summary"
-              hidden
-              aria-live="polite"
-            ></p>
+            <h3>Dados do pedido</h3>
             <p class="form-intro">Campos com * são obrigatórios.</p>
             <fieldset
               id="quote-controls"
@@ -435,46 +429,41 @@
               disabled
               aria-label="Dados para o orçamento"
             >
-              <div class="form-row">
-                <label for="name"
-                  >Seu nome *<input
-                    id="name"
-                    name="name"
-                    autocomplete="name"
-                    required
-                    maxlength="100"
-                    placeholder="Seu nome…" /></label
-                ><label for="company"
-                  >Empresa *<input
-                    id="company"
-                    name="company"
-                    autocomplete="organization"
-                    required
-                    maxlength="120"
-                    placeholder="Empresa ou evento…"
-                /></label>
-              </div>
-              <div class="form-row">
-                <label for="phone"
-                  >Telefone com DDD *<input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    autocomplete="tel-national"
-                    inputmode="tel"
-                    required
-                    maxlength="20"
-                    placeholder="(77) 99999-9999…" /></label
-                ><label for="city"
-                  >Cidade / UF<input
-                    id="city"
-                    name="city"
-                    autocomplete="address-level2"
-                    maxlength="100"
-                    placeholder="Ex.: Barreiras / BA…"
-                /></label>
-              </div>
-              <fieldset>
+              <fieldset class="quote-contact-fields">
+                <legend>Seu contato</legend>
+                <div class="form-row">
+                  <label for="name"
+                    >Seu nome *<input
+                      id="name"
+                      name="name"
+                      autocomplete="name"
+                      required
+                      maxlength="100"
+                      placeholder="Seu nome…" /></label
+                  ><label for="company"
+                    >Empresa *<input
+                      id="company"
+                      name="company"
+                      autocomplete="organization"
+                      required
+                      maxlength="120"
+                      placeholder="Empresa ou evento…"
+                  /></label>
+                </div>
+                <div class="form-row">
+                  <label for="phone"
+                    >Telefone com DDD *<input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel-national"
+                      inputmode="tel"
+                      required
+                      maxlength="20"
+                      placeholder="(77) 99999-9999…" /></label>
+                </div>
+              </fieldset>
+              <fieldset class="quote-category-fields">
                 <legend>Quais uniformes você precisa? *</legend>
                 <p class="field-help">
                   Você pode selecionar mais de uma opção.
@@ -511,19 +500,41 @@
                   >
                 </div>
               </fieldset>
-              <label for="quantity"
-                >Quantidade de peças <span class="optional">(opcional)</span
-                ><input
-                  id="quantity"
-                  name="quantity"
-                  autocomplete="off"
-                  type="number"
-                  inputmode="numeric"
-                  min="1"
-                  step="1"
-                  placeholder="Ex.: 20…"
-              /></label>
+              <fieldset class="quote-details-fields">
+                <legend>Detalhes opcionais</legend>
+                <div class="form-row">
+                  <label for="quantity">
+                    <span class="field-label">Quantidade de peças <span class="optional">(opcional)</span></span>
+                    <input
+                      id="quantity"
+                      name="quantity"
+                      autocomplete="off"
+                      type="number"
+                      inputmode="numeric"
+                      min="1"
+                      step="1"
+                      placeholder="Ex.: 20…"
+                    />
+                  </label>
+                  <label for="city">
+                    <span class="field-label">Cidade / UF</span>
+                    <input
+                      id="city"
+                      name="city"
+                      autocomplete="address-level2"
+                      maxlength="100"
+                      placeholder="Ex.: Barreiras / BA…"
+                    />
+                  </label>
+                </div>
+              </fieldset>
               <p id="form-error" role="alert" aria-live="polite"></p>
+              <p
+                id="selection-summary"
+                class="selection-summary"
+                hidden
+                aria-live="polite"
+              ></p>
               <button hidden disabled class="button form-submit" type="submit">
                 Revisar no WhatsApp
                 <span aria-hidden="true"
