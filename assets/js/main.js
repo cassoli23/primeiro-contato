@@ -41,7 +41,9 @@ window.matchMedia("(min-width: 761px)").addEventListener("change", (event) => {
 });
 const form = document.querySelector("#quote-form");
 const error = document.querySelector("#form-error");
+let activeErrorInput = null;
 const showError = (message, input) => {
+  activeErrorInput = input;
   error.textContent = message;
   input.setAttribute("aria-invalid", "true");
   const inline = document.createElement("span");
@@ -57,11 +59,48 @@ const showError = (message, input) => {
   input.setAttribute("aria-describedby", inline.id);
   input.focus();
 };
+const clearFieldError = (input) => {
+  const inputs =
+    input.name === "category"
+      ? form.querySelectorAll('[name="category"]')
+      : [input];
+  inputs.forEach((field) => {
+    const errorId = field.getAttribute("aria-describedby");
+    if (errorId) document.getElementById(errorId)?.remove();
+    field.removeAttribute("aria-invalid");
+    field.removeAttribute("aria-describedby");
+  });
+  if (
+    activeErrorInput === input ||
+    (input.name === "category" && activeErrorInput?.name === "category")
+  ) {
+    error.textContent = "";
+    activeErrorInput = null;
+  }
+};
+const syncCategorySelection = () => {
+  const selected = [...form.querySelectorAll('[name="category"]:checked')];
+  const categories = selected.map((input) => input.value);
+  document.querySelectorAll("[data-uniform]").forEach((link) => {
+    const checked = categories.includes(link.dataset.uniform);
+    link.classList.toggle("is-selected", checked);
+    if (checked) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+  const summary = document.querySelector("#selection-summary");
+  summary.textContent = categories.length
+    ? `${categories.length === 1 ? "Linha escolhida" : "Linhas escolhidas"}: ${categories.join(", ")}. Você pode ajustar as opções abaixo.`
+    : "";
+  summary.hidden = categories.length === 0;
+  if (selected.length) clearFieldError(selected[0]);
+};
 form.addEventListener("input", (event) => {
-  const errorId = event.target.getAttribute("aria-describedby");
-  if (errorId) document.getElementById(errorId)?.remove();
-  event.target.removeAttribute("aria-invalid");
-  event.target.removeAttribute("aria-describedby");
+  if (event.target.name === "category") {
+    syncCategorySelection();
+    return;
+  }
+  if (event.target.name === "name" && !event.target.value.trim()) return;
+  clearFieldError(event.target);
 });
 // Parse the decimal spelling exactly; floating point would round long quantities.
 const positiveIntegerText = (value) => {
@@ -86,6 +125,7 @@ const positiveIntegerText = (value) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   error.textContent = "";
+  activeErrorInput = null;
   form.querySelectorAll("[data-field-error]").forEach((item) => item.remove());
   form.querySelectorAll("[aria-invalid]").forEach((input) => {
     input.removeAttribute("aria-invalid");
@@ -149,19 +189,13 @@ document.querySelector("#form-unavailable").hidden = true;
 // Escolher uma linha na vitrine prepara o orçamento e mantém o link acessível.
 document.querySelectorAll("[data-uniform]").forEach((link) => {
   link.addEventListener("click", () => {
-    document.querySelectorAll("[data-uniform]").forEach((item) => {
-      item.classList.toggle("is-selected", item === link);
-      if (item === link) item.setAttribute("aria-current", "true");
-      else item.removeAttribute("aria-current");
-    });
     form.querySelectorAll('[name="category"]').forEach((input) => {
-      input.checked = input.value === link.dataset.uniform;
+      if (input.value === link.dataset.uniform) input.checked = true;
     });
-    const summary = document.querySelector("#selection-summary");
-    summary.textContent = `Linha escolhida: ${link.textContent.trim()}. Você pode ajustar as opções abaixo.`;
-    summary.hidden = false;
+    syncCategorySelection();
   });
 });
+syncCategorySelection();
 // As animações só são aplicadas a conteúdo já visível; uma falha não oculta a página.
 if (
   "IntersectionObserver" in window &&
