@@ -4,11 +4,11 @@
 
 ## 1. Visual Theme & Atmosphere
 
-Catálogo editorial de uma fábrica familiar de uniformes em Luís Eduardo Magalhães. A identidade azul royal e dourada aparece nas grandes áreas de cor, nas fotografias ilustrativas e nos pontos de contato. A primeira tela apresenta os uniformes e oferece orçamento rápido. A vitrine combina imagens em tamanhos diferentes, sem repetir três caixas iguais.
+Catálogo editorial de uma fábrica familiar de uniformes em Luís Eduardo Magalhães. A identidade azul-marinho e dourada aparece nas grandes áreas de cor, nas fotografias ilustrativas e nos pontos de contato. A primeira tela apresenta os uniformes e oferece orçamento rápido. A vitrine combina imagens em tamanhos diferentes, sem repetir três caixas iguais.
 
 A proposta preserva a ideia vencedora da arena: identidade da empresa aplicada às peças, escolha simples de linha e contato seguro mesmo quando um recurso externo falha. O cliente pode escolher a linha na vitrine; essa escolha já prepara a categoria no orçamento. Não se divulga pedido mínimo. Bordado, Silk Screen e DTF fazem parte do uniforme, sem uma oferta de serviço ou orçamento separados.
 
-Direção tasteskill: The specimen catalogue, seed 810480687. Composição adaptada ao conteúdo real: vitrine com três linhas em painéis desiguais; apresentação da empresa sem retratos de equipe inexistentes; orçamento com os seis campos disponíveis. Essas adaptações evitam inventar pessoas ou retirar informações necessárias.
+Direção tasteskill: The split stage, seed 609361152. Composição adaptada ao conteúdo real: vitrine com três linhas em painéis desiguais; apresentação da empresa sem retratos de equipe inexistentes; orçamento com os seis campos disponíveis. Essas adaptações evitam inventar pessoas ou retirar informações necessárias.
 
 ## 2. Color Palette & Roles
 
@@ -30,7 +30,7 @@ A hierarquia usa tamanho e espaço, sem palavras do título em cores diferentes.
 
 ## 4. Component Stylings
 
-- **Buttons:** retângulos de cantos retos, preenchimento sólido e área confortável para toque. Ação principal dourada sobre royal; ações sobre branco usam royal. Interações respondem com deslocamento mínimo e cor, e têm foco visível.
+- **Buttons:** retângulos de cantos retos, preenchimento sólido e área confortável para toque. Ação principal dourada sobre azul-marinho; ações sobre branco usam azul-marinho. Interações respondem com deslocamento mínimo e cor, e têm foco visível.
 - **Cards/Containers:** fotografias com cantos retos, espaços abertos e tamanhos variados. Conteúdo não usa caixas com bordas finas ou sombras. Um painel dourado pequeno integra as opções de marca aos uniformes.
 - **Inputs/Forms:** campos claros com contorno legível, rótulos permanentes e erro junto do campo. Categorias têm controle e rótulo com a mesma área de toque. Sem envio automático: a mensagem é revisada no WhatsApp.
 - **Images:** ativos locais WebP com dimensões declaradas e imagens secundárias carregadas sob demanda. São imagens geradas por IA e identificadas como ilustrativas; substituir por fotos reais quando disponíveis, sem representá-las como registros da fábrica.
@@ -38,7 +38,7 @@ A hierarquia usa tamanho e espaço, sem palavras do título em cores diferentes.
 
 ## 5. Layout Principles
 
-Margens consistentes e largura máxima de leitura. No desktop, abertura com texto e mosaico fotográfico; vitrine com uma imagem maior e duas menores; atendimento com fotografia e dúvidas; orçamento em área royal com formulário claro; rodapé organizado em superfícies preenchidas. No celular, todos os blocos tornam-se uma coluna e os controles mantêm área ampla para toque.
+Margens consistentes e largura máxima de leitura. No desktop, abertura dividida com fotografia dominante e coluna de texto; vitrine com uma imagem maior e duas menores; atendimento com fotografia e dúvidas; orçamento em área azul-marinho com formulário claro; rodapé organizado em superfícies preenchidas. No celular, todos os blocos tornam-se uma coluna e os controles mantêm área ampla para toque.
 
 Navegação por âncoras reais. Sem JavaScript, os links mobile e os CTAs específicos de WhatsApp continuam disponíveis. O formulário só é habilitado depois de instalar a validação; se o script falhar, um contato direto permanece visível. O CDN do Tailwind não bloqueia a interação local.
 

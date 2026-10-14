@@ -17,8 +17,8 @@
   font-display: swap;
 }
 :root {
-  --royal: #1d4ed8;
-  --ink: #142442;
+  --navy: #10213b;
+  --ink: #10213b;
   --gold: #e8c77f;
   --gold-ink: #785416;
   --paper: #fff;
@@ -117,7 +117,7 @@ html:root {
 :root button:focus-visible,
 :root input:focus-visible,
 :root summary:focus-visible {
-  outline: 3px solid var(--royal);
+  outline: 3px solid var(--navy);
   outline-offset: 5px;
 }
 :root .hero a:focus-visible,
@@ -139,7 +139,7 @@ html:root {
   gap: 24px;
   min-height: 54px;
   padding: 13px 21px;
-  background: var(--royal);
+  background: var(--navy);
   color: white;
   border: 0;
   border-radius: 0;
@@ -154,7 +154,7 @@ html:root {
   display: flex;
 }
 :root .button:hover {
-  background: #163da9;
+  background: #203b60;
   transform: translateY(-2px);
 }
 :root .button:active {
@@ -175,7 +175,7 @@ html:root {
   min-height: 44px;
   font-size: var(--body);
   font-weight: 600;
-  color: var(--royal);
+  color: var(--navy);
 }
 :root .card-link:hover,
 :root .text-link:hover {
@@ -210,7 +210,7 @@ html:root {
   padding-block: 12px;
 }
 :root .desktop-nav a:hover {
-  color: var(--royal);
+  color: var(--navy);
 }
 :root .small {
   min-height: 46px;
@@ -249,7 +249,7 @@ html:root {
   font-weight: 600;
 }
 :root .hero {
-  background: var(--royal);
+  background: var(--navy);
   color: white;
   padding-top: 48px;
 }
@@ -362,7 +362,7 @@ html:root {
 }
 :root .line-picker a:hover,
 :root .line-picker a.is-selected {
-  background: var(--royal);
+  background: var(--navy);
   color: white;
 }
 :root .product-gallery {
@@ -494,7 +494,7 @@ html:root {
   max-width: 550px;
 }
 :root .contact-section {
-  background: var(--royal);
+  background: var(--navy);
   color: white;
 }
 :root .contact-grid {
@@ -616,8 +616,8 @@ html:root {
   cursor: pointer;
 }
 :root .category-options label:has(input:checked) {
-  background: #e4edff;
-  color: var(--royal);
+  background: #e9edf3;
+  color: var(--navy);
 }
 :root .category-options input {
   width: 18px;
@@ -625,7 +625,7 @@ html:root {
   margin: 0;
   padding: 0;
   flex-shrink: 0;
-  accent-color: var(--royal);
+  accent-color: var(--navy);
 }
 :root .optional {
   font-weight: 400;
@@ -642,7 +642,7 @@ html:root {
 }
 :root .form-availability a {
   text-decoration: underline;
-  color: var(--royal);
+  color: var(--navy);
 }
 :root #form-error {
   color: #9b261f;
@@ -690,7 +690,7 @@ html:root {
   gap: 10px;
   align-items: center;
   min-height: 44px;
-  color: var(--royal);
+  color: var(--navy);
   font-size: var(--small);
   overflow-wrap: anywhere;
 }
@@ -956,7 +956,7 @@ html:root {
   }
 }
 :root {
-  --royal: #1943c8;
+  --navy: #10213b;
 }
 :root .brand-detail {
   background: var(--gold);
@@ -1052,4 +1052,74 @@ html:root {
   font-weight: 400;
   margin-top: 10px;
   line-height: 1.6;
+}
+
+/* Direção split-stage: fotografia dominante e coluna de leitura no desktop. */
+:root .hero-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+:root .hero-mosaic {
+  order: -1;
+  display: block;
+  height: 540px;
+  position: relative;
+}
+:root .mosaic-main {
+  height: calc(100% - 30px);
+}
+:root .mosaic-main img {
+  object-position: 58% center;
+}
+:root .mosaic-caption {
+  margin-top: 12px;
+}
+:root .hero-copy {
+  position: static;
+  padding-block: 25px;
+}
+:root .hero-foot {
+  margin-top: 12px;
+}
+:root .footer-identity {
+  background: var(--paper);
+}
+@media (min-width: 1100px) {
+  :root .hero-mosaic {
+    position: sticky;
+    top: 24px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1099px) {
+  :root .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  :root .hero-copy {
+    order: -2;
+    padding: 0;
+  }
+  :root .hero-mosaic {
+    height: 420px;
+  }
+  :root h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 760px) {
+  :root .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  :root .hero-copy {
+    order: -2;
+    padding: 0;
+  }
+  :root .hero-mosaic {
+    height: 365px;
+  }
+  :root h1 {
+    font-size: clamp(35px, 10.4vw, 62px);
+  }
 }

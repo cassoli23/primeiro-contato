@@ -18,7 +18,7 @@ O visitante revisa e envia a mensagem no WhatsApp. O site não armazena leads ne
 
 ## Design e imagens
 
-[DESIGN.md](DESIGN.md) descreve o sistema visual royal e dourado. A implementação aproveita a validação e os mecanismos de contato da vencedora da arena de 16 propostas, com uma nova composição de catálogo editorial orientada pelas skills solicitadas.
+[DESIGN.md](DESIGN.md) descreve o sistema visual azul-marinho, dourado e branco. A implementação aproveita a validação e os mecanismos de contato da vencedora da arena de 16 propostas, com uma nova composição de catálogo editorial orientada pelas skills solicitadas.
 
 O logo veio do PDF fornecido pela empresa. As quatro imagens editoriais foram geradas por IA e são identificadas como ilustrativas; não representam o catálogo ou a fábrica real. Substitua os WebP por fotos reais quando disponíveis. Não houve acesso aos posts do Instagram.
 

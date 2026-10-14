@@ -48,3 +48,11 @@ A documentação não força Title Case inglês em textos pt-BR e não adiciona 
 Quatro imagens locais geradas por IA: coleção de peças, costura, camisetas e detalhe de bordado. Nenhuma foto foi obtida de terceiros ou do Instagram; não são apresentados como catálogo ou registros reais. Logo original do usuário. Fontes locais com licença em assets/fonts/LICENSE.txt.
 
 Skills instaladas: design-taste-frontend, web-design-guidelines, design-md e playwright-cli. O CLI está em /workspace/.tools/bin/playwright-cli. O site não exige essas ferramentas para funcionar ou publicar. O MCP Stitch não está configurado; DESIGN.md foi sintetizado dos ativos locais, sem inventar um Project ID remoto.
+
+## Atualização: azul-marinho, dourado e branco
+
+Nova direção: The split stage, seed 609361152. A abertura passa a ter fotografia dominante à esquerda e coluna de texto à direita; no celular, texto e CTA vêm antes da fotografia para facilitar contato. Os conteúdos e a base funcional da arena foram preservados. Seções de carta de fundador e contato por email sugeridas pela folha não foram adotadas: não há carta, retrato ou email fornecidos, e o contato solicitado é por formulário e WhatsApp.
+
+Cor principal atual: #10213B; secundárias: #E8C77F e #FFFFFF. Tokens e metadados foram atualizados; o logo conserva a arte original. A imagem do uniforme permanece ilustrativa.
+
+Crítica visual: abertura com fotografia grande em campo marinho; fundo claro na vitrine; dourado limitado às ações e detalhe de marca. Autoavaliação: design 8.0, usabilidade 8.3, criatividade 6.9, conteúdo 7.5; resultado 7.8. Limitação: as imagens ainda são ilustrativas e não há vídeo real da fábrica. Inspector atual: 0 FAIL, 1 WARN pela ausência desse vídeo.
