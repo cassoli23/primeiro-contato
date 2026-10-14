@@ -1123,3 +1123,136 @@ html:root {
     font-size: clamp(35px, 10.4vw, 62px);
   }
 }
+
+/* Hero comercial: estilos isolados para preservar as demais seções. */
+:root #inicio {
+  padding-block: 48px 24px;
+}
+:root #inicio .hero-grid {
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+}
+:root #inicio .hero-copy {
+  order: 0;
+  padding: 0;
+  position: static;
+  min-width: 0;
+}
+:root #inicio h1 {
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  max-width: 19ch;
+}
+:root #inicio .hero-description {
+  max-width: 48ch;
+  margin: 22px 0 26px;
+  line-height: 1.65;
+}
+:root #inicio .hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+:root #inicio .hero-actions .button {
+  width: auto;
+  gap: 16px;
+  font-size: 14px;
+}
+:root #inicio .hero-secondary {
+  margin: 0;
+  font-size: 14px;
+}
+:root #inicio .hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+:root #inicio .hero-benefits li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+:root #inicio .hero-benefits li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  background: var(--gold);
+}
+:root #inicio .hero-location {
+  margin-top: 20px;
+  max-width: 48ch;
+}
+:root #inicio .hero-mosaic {
+  order: 0;
+  height: auto;
+  position: static;
+}
+:root #inicio .mosaic-main {
+  height: auto;
+  aspect-ratio: 5 / 4;
+}
+:root #inicio .mosaic-main img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+:root #inicio .mosaic-caption {
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  :root #inicio {
+    padding-block: 32px 24px;
+  }
+  :root #inicio .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  :root #inicio h1 {
+    max-width: 24ch;
+  }
+  :root #inicio .hero-description {
+    max-width: 60ch;
+  }
+  :root #inicio .mosaic-main {
+    aspect-ratio: 3 / 1;
+  }
+}
+@media (max-width: 760px) {
+  :root #inicio {
+    padding-block: 24px 20px;
+  }
+  :root #inicio h1 {
+    font-size: clamp(30px, 8.2vw, 36px);
+  }
+  :root #inicio .hero-description {
+    margin: 16px 0 20px;
+    line-height: 1.55;
+  }
+  :root #inicio .hero-actions {
+    gap: 4px 10px;
+  }
+  :root #inicio .hero-actions .button {
+    padding-inline: 16px;
+  }
+  :root #inicio .hero-secondary {
+    font-size: 13px;
+  }
+  :root #inicio .hero-benefits {
+    gap: 6px 16px;
+    margin-top: 18px;
+  }
+  :root #inicio .hero-location {
+    margin-top: 14px;
+  }
+  :root #inicio .mosaic-main {
+    aspect-ratio: 2 / 1;
+  }
+}
