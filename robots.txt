@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://primeiro-contato-one.vercel.app/sitemap.xml

@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ParanáLEM Uniformes | Sua equipe, sua identidade</title>
-    <meta
-      name="description"
-      content="Uniformes profissionais de alta durabilidade para empresas e eventos. Bordado, Silk Screen e DTF. ParanáLEM em Luís Eduardo Magalhães, BA. Atendimento em todo o Brasil."
-    />
+    <title>Uniformes Profissionais em Luís Eduardo Magalhães/BA | ParanáLEM</title>
+    <meta name="description" content="Uniformes profissionais personalizados em Luís Eduardo Magalhães/BA. Produção própria para empresas e eventos. Atendimento em todo o Brasil." />
     <meta name="theme-color" content="#10213b" />
-    <meta
-      property="og:title"
-      content="ParanáLEM Uniformes | Sua equipe, sua identidade"
-    />
-    <meta
-      property="og:description"
-      content="Uniformes profissionais e personalizados. Da Bahia para todo o Brasil."
-    />
+    <link rel="canonical" href="https://primeiro-contato-one.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="ParanáLEM Uniformes" />
+    <meta property="og:title" content="Uniformes Profissionais em Luís Eduardo Magalhães/BA | ParanáLEM" />
+    <meta property="og:description" content="Uniformes profissionais personalizados em Luís Eduardo Magalhães/BA. Produção própria para empresas e eventos. Atendimento em todo o Brasil." />
+    <meta property="og:url" content="https://primeiro-contato-one.vercel.app/" />
+    <meta property="og:image" content="https://primeiro-contato-one.vercel.app/assets/images/colecao.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Composição ilustrativa de uniformes profissionais: camisa social, polo e casaco." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Uniformes Profissionais em Luís Eduardo Magalhães/BA | ParanáLEM" />
+    <meta name="twitter:description" content="Uniformes profissionais personalizados em Luís Eduardo Magalhães/BA. Produção própria para empresas e eventos. Atendimento em todo o Brasil." />
+    <meta name="twitter:image" content="https://primeiro-contato-one.vercel.app/assets/images/colecao.webp" />
+    <meta name="twitter:image:alt" content="Composição ilustrativa de uniformes profissionais: camisa social, polo e casaco." />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" sizes="any" />
     <link
       rel="preload"
       href="assets/fonts/jakarta-700.woff2"
@@ -31,6 +35,63 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="https://cdn.tailwindcss.com" async></script>
     <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://primeiro-contato-one.vercel.app/#empresa",
+        "name": "ParanáLEM Uniformes",
+        "url": "https://primeiro-contato-one.vercel.app/",
+        "description": "Produção própria de uniformes profissionais personalizados para empresas e eventos em Luís Eduardo Magalhães, Bahia, com atendimento para todo o Brasil.",
+        "logo": "https://primeiro-contato-one.vercel.app/assets/images/logo.webp",
+        "image": "https://primeiro-contato-one.vercel.app/assets/images/logo.webp",
+        "telephone": "+55 77 99974-1169",
+        "taxID": "35.313.424/0001-90",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55 77 99196-5682",
+            "contactType": "Atendimento",
+            "availableLanguage": "pt-BR"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Barbatimão, 383, Jardim das Acácias",
+          "addressLocality": "Luís Eduardo Magalhães",
+          "addressRegion": "BA",
+          "postalCode": "47862-140",
+          "addressCountry": "BR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "https://schema.org/Monday",
+              "https://schema.org/Tuesday",
+              "https://schema.org/Wednesday",
+              "https://schema.org/Thursday",
+              "https://schema.org/Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Saturday",
+            "opens": "08:00",
+            "closes": "12:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/uniformes.paranalem/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -149,6 +210,7 @@
             </p>
             <div
               class="line-picker"
+              role="group"
               aria-label="Escolher linha para o orçamento"
             >
               <a href="#contato" data-uniform="Operacional">Operacional</a
@@ -456,7 +518,7 @@
                       id="phone"
                       name="phone"
                       type="tel"
-                      autocomplete="tel-national"
+                      autocomplete="tel"
                       inputmode="tel"
                       required
                       maxlength="20"
