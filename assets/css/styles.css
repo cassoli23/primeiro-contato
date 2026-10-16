@@ -1638,3 +1638,97 @@ html:root {
     aspect-ratio: 3 / 2;
   }
 }
+
+/* CTA principal: contorno interno preserva as dimensões existentes. */
+:root #inicio .hero-actions > .gold-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--navy);
+  color: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--gold);
+  transition:
+    scale 0.25s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+:root #inicio .hero-actions > .gold-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgb(232 199 127 / 14%) 50%,
+    transparent 75%
+  );
+  transform: translateX(-110%);
+}
+:root #inicio .hero-actions > .gold-button:hover,
+:root #inicio .hero-actions > .gold-button:active {
+  transform: none;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :root #inicio .hero-actions > .gold-button:hover {
+    scale: 1.02;
+    box-shadow:
+      inset 0 0 0 1px var(--gold),
+      0 0 12px rgb(232 199 127 / 10%);
+  }
+  :root #inicio .hero-actions > .gold-button:hover::before {
+    animation: quote-cta-sheen 0.85s var(--ease) both;
+  }
+}
+@keyframes quote-cta-sheen {
+  0% {
+    opacity: 0;
+    transform: translateX(-110%);
+  }
+  20%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(110%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root #inicio .hero-actions > .gold-button {
+    scale: none;
+  }
+}
+
+/* Interação da vitrine: movimento restrito a mouse e sem ampliar os cards. */
+:root #produtos .product-card {
+  transition: transform 0.3s var(--ease);
+}
+:root #produtos .product-card .product-visual img {
+  transform: none;
+  transition: transform 0.45s var(--ease);
+}
+:root #produtos .product-card .card-link {
+  transition: color 0.25s var(--ease);
+}
+:root #produtos .product-card:focus-within .card-link {
+  color: var(--gold-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  :root #produtos .product-card:hover .card-link {
+    color: var(--gold-ink);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :root #produtos .product-card:hover {
+    transform: translateY(-3px);
+  }
+  :root #produtos .product-card:hover .product-visual img {
+    transform: scale(1.02);
+  }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  :root #produtos .product-card .card-link > span {
+    transform: none;
+  }
+}
