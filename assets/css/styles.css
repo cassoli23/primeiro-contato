@@ -1639,6 +1639,110 @@ html:root {
   }
 }
 
+/* Novos ativos: preservar rostos, peças e aplicações sem ampliar os recortes. */
+:root #produtos .product-visual {
+  background: var(--paper);
+}
+:root #inicio .mosaic-main img {
+  object-fit: contain;
+  object-position: 50% 45%;
+}
+:root #produtos .corporate .product-visual img,
+:root #produtos .operational .product-visual img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  transform-origin: center;
+}
+:root #produtos .events .product-visual img {
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+:root #produtos .brand-detail img {
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+:root #atendimento .coverage-photo img {
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+@media (max-width: 760px) {
+  :root #inicio .mosaic-main img {
+    object-position: 50% 40%;
+  }
+  :root #produtos .corporate .product-visual img,
+  :root #produtos .operational .product-visual img,
+  :root #produtos .events .product-visual img {
+    object-position: 50% 50%;
+  }
+  :root #produtos .brand-detail img,
+  :root #atendimento .coverage-photo img {
+    object-position: 50% 50%;
+  }
+}
+
+/* Acabamento de publicação: técnicas legíveis e identificação do ambiente. */
+:root #atendimento .coverage-photo {
+  aspect-ratio: auto;
+}
+:root #atendimento .coverage-photo img {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+:root #atendimento .coverage-photo figcaption {
+  margin-top: 10px;
+  font-size: var(--small);
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  :root #produtos .brand-detail {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  :root #produtos .brand-detail figure {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1;
+    margin-inline: auto;
+  }
+  :root #produtos .brand-detail > div {
+    padding: 20px;
+  }
+  :root footer {
+    padding: 28px 0 80px;
+  }
+  :root footer .footer-grid {
+    gap: 8px;
+  }
+  :root footer .footer-tile {
+    padding: 16px;
+  }
+  :root footer .footer-identity {
+    padding: 0 0 8px;
+  }
+  :root footer .footer-brand img {
+    width: 120px;
+    height: 70px;
+  }
+  :root footer .footer-identity > p,
+  :root footer .footer-wordmark {
+    display: none;
+  }
+  :root footer .footer-tile h3 {
+    margin-bottom: 8px;
+  }
+  :root footer .footer-tile p,
+  :root footer .footer-tile address {
+    line-height: 1.6;
+  }
+  :root footer .footer-bottom {
+    gap: 6px;
+    padding-top: 10px;
+  }
+}
+
 /* CTA principal: contorno interno preserva as dimensões existentes. */
 :root #inicio .hero-actions > .gold-button {
   position: relative;

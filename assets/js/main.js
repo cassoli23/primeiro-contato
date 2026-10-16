@@ -136,6 +136,7 @@ form.addEventListener("submit", (event) => {
   const company = String(data.get("company") || "").trim();
   const phone = String(data.get("phone") || "").trim();
   const digits = phone.replace(/\D/g, "");
+  const nationalDigits = /^55\d{10,11}$/.test(digits) ? digits.slice(2) : digits;
   const quantityInput = form.elements.quantity;
   const quantity = quantityInput.value.trim();
   const normalizedQuantity = quantity ? positiveIntegerText(quantity) : null;
@@ -144,7 +145,7 @@ form.addEventListener("submit", (event) => {
   if (!name) return showError("Informe seu nome.", form.elements.name);
   if (!company)
     return showError("Informe sua empresa ou evento.", form.elements.company);
-  if (!/^[\d\s()+.-]+$/.test(phone) || !/^\d{10,11}$/.test(digits))
+  if (!/^[\d\s()+.-]+$/.test(phone) || !/^\d{10,11}$/.test(nationalDigits))
     return showError(
       "Informe um telefone com DDD, com 10 ou 11 dígitos.",
       form.elements.phone,
