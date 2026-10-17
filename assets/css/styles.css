@@ -1836,3 +1836,129 @@ html:root {
     transform: none;
   }
 }
+
+/* Abertura editorial: os uniformes ganham presença, com ação antes da fotografia. */
+:root #inicio.hero-production {
+  background: var(--paper);
+  color: var(--ink);
+  padding-block: 40px 48px;
+}
+:root #inicio.hero-production .hero-grid {
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 32px 48px;
+}
+:root #inicio.hero-production h1 {
+  font-size: clamp(38px, 4.5vw, 64px);
+  max-width: 18ch;
+  line-height: 1.04;
+}
+:root #inicio.hero-production .hero-description {
+  max-width: 44ch;
+  margin: 24px 0 28px;
+}
+:root #inicio.hero-production .hero-mosaic {
+  min-width: 0;
+}
+:root #inicio.hero-production .mosaic-main {
+  aspect-ratio: 3 / 2;
+}
+:root #inicio.hero-production .mosaic-main img {
+  object-fit: contain;
+  object-position: center;
+  animation: none;
+}
+:root #inicio.hero-production .mosaic-caption {
+  color: #4a5870;
+}
+:root #inicio.hero-production .hero-proof {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px 48px;
+}
+:root #inicio.hero-production .hero-benefits {
+  margin: 0;
+  gap: 12px 24px;
+  font-size: 14px;
+}
+:root #inicio.hero-production .hero-location {
+  margin: 0;
+  max-width: 36ch;
+  color: #4a5870;
+}
+:root #inicio.hero-production a:focus-visible {
+  outline-color: var(--navy);
+}
+@media (max-width: 900px) {
+  :root #inicio.hero-production .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  :root #inicio.hero-production h1 {
+    max-width: 22ch;
+  }
+  :root #inicio.hero-production .mosaic-main {
+    aspect-ratio: 3 / 2;
+  }
+}
+@media (max-width: 760px) {
+  :root #inicio.hero-production {
+    padding-block: 20px 32px;
+  }
+  :root #inicio.hero-production .hero-grid {
+    gap: 22px;
+  }
+  :root #inicio.hero-production h1 {
+    font-size: clamp(31px, 8.8vw, 40px);
+    max-width: 20ch;
+  }
+  :root #inicio.hero-production .hero-description {
+    margin: 18px 0 20px;
+  }
+  :root #inicio.hero-production .hero-actions {
+    gap: 6px 12px;
+  }
+  :root #inicio.hero-production .mosaic-main {
+    aspect-ratio: 3 / 2;
+  }
+  :root #inicio.hero-production .hero-proof {
+    flex-direction: column;
+    gap: 14px;
+  }
+  :root #inicio.hero-production .hero-benefits {
+    font-size: 13px;
+    gap: 8px 18px;
+  }
+  :root #inicio.hero-production .hero-location {
+    max-width: 48ch;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root #inicio.hero-production .hero-enter {
+    animation: hero-production-enter 0.85s var(--ease) backwards;
+  }
+  :root #inicio.hero-production .hero-description.hero-enter {
+    animation-delay: 0.12s;
+  }
+  :root #inicio.hero-production .hero-actions.hero-enter {
+    animation-delay: 0.24s;
+  }
+  :root #inicio.hero-production .hero-mosaic.hero-enter {
+    animation-delay: 0.2s;
+  }
+  :root #inicio.hero-production .hero-proof.hero-enter {
+    animation-delay: 0.32s;
+  }
+}
+@keyframes hero-production-enter {
+  from {
+    opacity: 0.2;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

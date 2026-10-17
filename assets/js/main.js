@@ -207,6 +207,14 @@ if (
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const element = entry.target;
+        if (element.closest("#inicio")) {
+          const reveal = () => element.classList.add("hero-enter");
+          const image = element.querySelector("img");
+          if (image) image.decode().catch(() => {}).then(reveal);
+          else reveal();
+          observer.unobserve(element);
+          return;
+        }
         element.classList.add(
           element.matches("figure, .product-visual")
             ? "enter-photo"
@@ -221,7 +229,7 @@ if (
   );
   document
     .querySelectorAll(
-      "h1, h2, .hero-description, .hero .button, .hero-location, .hero-mosaic figure, .product-visual, .product-content, .brand-detail, .coverage-copy, .coverage-photo, .faq-list details, .contact-copy, .quote-form, .footer-tile",
+      "h1, h2, .hero-description, .hero-actions, .hero-proof, .hero-mosaic, .product-visual, .product-content, .brand-detail, .coverage-copy, .coverage-photo, .faq-list details, .contact-copy, .quote-form, .footer-tile",
     )
     .forEach((element) => observer.observe(element));
 }
